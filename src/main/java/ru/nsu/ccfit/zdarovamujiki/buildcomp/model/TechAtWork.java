@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
-@IdClass(Key.class)
+@IdClass(TechAtWork.Key.class)
 public class TechAtWork {
     @Id
     @NotNull

@@ -6,9 +6,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Entity
-public class Bridge {
+public class Bridge implements Serializable {
     @Id
     @ManyToOne
     @JoinColumn

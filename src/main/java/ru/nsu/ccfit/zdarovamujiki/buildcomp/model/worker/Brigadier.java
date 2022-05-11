@@ -4,9 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.io.Serializable;
 
 @Entity
-public class Brigadier {
+public class Brigadier implements Serializable {
     @Id
     @ManyToOne
     @JoinColumn
