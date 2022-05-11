@@ -1,9 +1,12 @@
 package ru.nsu.ccfit.zdarovamujiki.buildcomp.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
+@Data
 public class Sector {
     @Id
     @GeneratedValue
@@ -13,5 +16,5 @@ public class Sector {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Management managementID;
+    private Management management;
 }

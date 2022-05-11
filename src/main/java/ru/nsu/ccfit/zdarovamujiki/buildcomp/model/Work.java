@@ -1,5 +1,6 @@
 package ru.nsu.ccfit.zdarovamujiki.buildcomp.model;
 
+import lombok.Data;
 import ru.nsu.ccfit.zdarovamujiki.buildcomp.model.buildingobject.BuildingObject;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
+@Data
 public class Work {
     @Id
     @GeneratedValue
