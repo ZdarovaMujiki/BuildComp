@@ -18,9 +18,9 @@ public class Worker {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Sector sectorID;
+    private Sector sector;
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Brigade brigadeID;
+    private Brigade brigade;
 }

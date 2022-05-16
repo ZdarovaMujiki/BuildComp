@@ -16,5 +16,5 @@ public class Tech {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Management managementID;
+    private Management management;
 }

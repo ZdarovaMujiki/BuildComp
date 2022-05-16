@@ -15,12 +15,12 @@ public class ResourceAtWork {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Work workID;
+    private Work work;
     @Id
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Resource resourceID;
+    private Resource resource;
     @NotNull
     @Min(0)
     private double plannedAmount;
@@ -29,6 +29,6 @@ public class ResourceAtWork {
 }
 
 class Key implements Serializable {
-    private Work workID;
-    private Resource resourceID;
+    private Work work;
+    private Resource resource;
 }

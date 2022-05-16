@@ -19,5 +19,5 @@ public class Personnel {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Sector sectorID;
+    private Sector sector;
 }

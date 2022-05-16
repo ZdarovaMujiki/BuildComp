@@ -19,5 +19,5 @@ public class BuildingObject {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Sector sectorID;
+    private Sector sector;
 }

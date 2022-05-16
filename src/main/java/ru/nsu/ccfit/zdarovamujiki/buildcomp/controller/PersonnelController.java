@@ -15,7 +15,14 @@ public class PersonnelController {
     PersonnelRepository repository;
 
     @GetMapping("")
-    public List<Personnel> getAll() {
+    public List<Personnel> getAll(@RequestParam Optional<Long> sector,
+                                  @RequestParam Optional<Long> management) {
+        if (sector.isPresent()) {
+            return repository.findAllBySector_Id(sector.get());
+        }
+        if (management.isPresent()) {
+            return repository.getPersonnelByManagement(management.get());
+        }
         return repository.findAll();
     }
 

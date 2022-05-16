@@ -13,9 +13,7 @@ import javax.validation.constraints.NotNull;
 public class Management {
     @Id
     @GeneratedValue
-    @Column(name = "id")
     private Long id;
     @NotNull
-    @Column(name = "name")
     private String name;
 }

@@ -35,13 +35,13 @@ INSERT INTO personnel VALUES
                           (14, 'Pamphile Meike', 'Homeless', 11),
                           (15, 'Laura Stephani', 'Management founder', 12);
 
-INSERT INTO sectormanager VALUES
+INSERT INTO sector_manager VALUES
                               (1),
                               (6),
                               (10),
                               (12);
 
-INSERT INTO managementmanager VALUES
+INSERT INTO management_manager VALUES
                                   (1),
                                   (7),
                                   (11),
@@ -73,7 +73,7 @@ INSERT INTO brigadier VALUES
                           (7),
                           (10);
 
-INSERT INTO buildingobject VALUES
+INSERT INTO building_object VALUES
                                (1, 'NEW-BUILD-2.0', 'city administration', 1),
                                (2, 'Crimea Bridge', 'country administration', 2);
 
@@ -105,7 +105,7 @@ INSERT INTO resource VALUES
                          (5, 'paint', 'liter'),
                          (6, 'iron', 'kilo');
 
-INSERT INTO resourceatwork VALUES
+INSERT INTO resource_at_work VALUES
                                (1, 1, 81, 80),
                                (1, 2, 44, 50),
                                (2, 1, 100, 100),
@@ -125,7 +125,7 @@ INSERT INTO Tech VALUES
                      (2, 'wrecking ball', 2),
                      (3, 'crane', 3);
 
-INSERT INTO techatwork VALUES
+INSERT INTO tech_at_work VALUES
                            (1, 1),
                            (4, 3),
                            (7, 1),

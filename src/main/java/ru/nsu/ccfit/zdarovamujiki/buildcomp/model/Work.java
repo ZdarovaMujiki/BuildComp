@@ -18,11 +18,11 @@ public class Work {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private BuildingObject objectID;
+    private BuildingObject object;
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Brigade brigadeID;
+    private Brigade brigade;
     @NotNull
     private Date plannedStart;
     @NotNull

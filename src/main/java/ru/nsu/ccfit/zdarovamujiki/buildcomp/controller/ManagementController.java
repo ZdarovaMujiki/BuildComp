@@ -3,6 +3,8 @@ package ru.nsu.ccfit.zdarovamujiki.buildcomp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.ccfit.zdarovamujiki.buildcomp.model.Management;
+import ru.nsu.ccfit.zdarovamujiki.buildcomp.query_types.ManagementWithManager;
+import ru.nsu.ccfit.zdarovamujiki.buildcomp.query_types.SectorWithManager;
 import ru.nsu.ccfit.zdarovamujiki.buildcomp.repository.ManagementRepository;
 
 import java.util.List;
@@ -37,5 +39,10 @@ public class ManagementController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         repository.deleteById(Long.valueOf(id));
+    }
+
+    @GetMapping("/managers")
+    public List<ManagementWithManager> getManagementsWithManagers() {
+        return repository.getManagementsWithManagers();
     }
 }

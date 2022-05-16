@@ -3,6 +3,7 @@ package ru.nsu.ccfit.zdarovamujiki.buildcomp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.ccfit.zdarovamujiki.buildcomp.model.Sector;
+import ru.nsu.ccfit.zdarovamujiki.buildcomp.query_types.SectorWithManager;
 import ru.nsu.ccfit.zdarovamujiki.buildcomp.repository.SectorRepository;
 
 import java.util.List;
@@ -24,6 +25,8 @@ public class SectorController {
         return repository.findById(Long.valueOf(id));
     }
 
+    //fix
+    //request id?
     @PostMapping("/new")
     public Sector create(@RequestBody Sector sector) {
         return repository.save(sector);
@@ -37,5 +40,10 @@ public class SectorController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         repository.deleteById(Long.valueOf(id));
+    }
+
+    @GetMapping("/managers")
+    public List<SectorWithManager> getSectorsWithManagers() {
+        return repository.getSectorsWithManagers();
     }
 }

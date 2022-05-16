@@ -16,7 +16,7 @@ public class House implements Serializable {
     @Id
     @ManyToOne
     @JoinColumn
-    private BuildingObject objectID;
+    private BuildingObject object;
     @NotNull
     @Min(1)
     private Long floors;

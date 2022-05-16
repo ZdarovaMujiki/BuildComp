@@ -14,15 +14,15 @@ public class TechAtWork {
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Work workID;
+    private Work work;
     @Id
     @NotNull
     @ManyToOne
     @JoinColumn
-    private Tech techID;
+    private Tech tech;
 
     static class Key implements Serializable {
-        private Work workID;
-        private Tech techID;
+        private Work work;
+        private Tech tech;
     }
 }
