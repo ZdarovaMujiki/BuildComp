@@ -10,14 +10,12 @@ import ru.nsu.ccfit.zdarovamujiki.buildcomp.query_types.Report;
 import ru.nsu.ccfit.zdarovamujiki.buildcomp.query_types.Schedule;
 import ru.nsu.ccfit.zdarovamujiki.buildcomp.repository.BuildingObjectRepository;
 
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("buildingObject")
+@RequestMapping("object")
 public class BuildingObjectController {
     @Autowired
     BuildingObjectRepository repository;

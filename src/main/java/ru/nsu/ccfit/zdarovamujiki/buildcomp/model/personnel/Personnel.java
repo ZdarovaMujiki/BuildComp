@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Data
 public class Personnel {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
     private String name;

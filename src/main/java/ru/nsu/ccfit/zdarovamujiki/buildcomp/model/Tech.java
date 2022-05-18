@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 @Data
 public class Tech {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
     private String name;

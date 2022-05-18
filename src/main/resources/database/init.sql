@@ -1,17 +1,17 @@
 CREATE TABLE Management (
-                            id int PRIMARY KEY,
+                            id SERIAL PRIMARY KEY,
                             name varchar NOT NULL
 );
 
 CREATE TABLE Sector (
-                        id int PRIMARY KEY,
+                        id SERIAL PRIMARY KEY,
                         name varchar NOT NULL,
                         management_ID int NOT NULL,
                         FOREIGN KEY (management_ID) REFERENCES Management(id)
 );
 
 CREATE TABLE Personnel (
-                           id int PRIMARY KEY,
+                           id SERIAL PRIMARY KEY,
                            name varchar NOT NULL,
                            duty varchar NOT NULL,
                            sector_ID int NOT NULL,
@@ -29,12 +29,12 @@ CREATE TABLE Management_Manager (
 );
 
 CREATE TABLE Brigade (
-                         id int PRIMARY KEY,
+                         id SERIAL PRIMARY KEY,
                          name varchar NOT NULL
 );
 
 CREATE TABLE Worker (
-                        id int PRIMARY KEY,
+                        id SERIAL PRIMARY KEY,
                         name varchar NOT NULL,
                         sector_ID int,   --?
                         brigade_ID int,
@@ -48,7 +48,7 @@ CREATE TABLE Brigadier (
 );
 
 CREATE TABLE Building_Object (
-                                id int PRIMARY KEY,
+                                id SERIAL PRIMARY KEY,
                                 name varchar NOT NULL,
                                 client varchar NOT NULL,
                                 sector_ID int NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE House (
 );
 
 CREATE TABLE Work (
-                      id int PRIMARY KEY,
+                      id SERIAL PRIMARY KEY,
                       name varchar NOT NULL,
                       object_ID int NOT NULL,
                       brigade_ID int NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE Work (
 );
 
 CREATE TABLE Resource (
-                          id int PRIMARY KEY,
+                          id SERIAL PRIMARY KEY,
                           name varchar NOT NULL,
                           measure varchar NOT NULL
 );
@@ -99,7 +99,7 @@ CREATE TABLE Resource_At_Work (
 );
 
 CREATE TABLE Tech (
-                      id int PRIMARY KEY,
+                      id SERIAL PRIMARY KEY,
                       name varchar NOT NULL,
                       management_ID int,
                       FOREIGN KEY (management_ID) REFERENCES Management(id)
